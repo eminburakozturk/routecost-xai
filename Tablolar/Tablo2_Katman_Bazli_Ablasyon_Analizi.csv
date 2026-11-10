@@ -1,0 +1,8 @@
+﻿Aşama,Öznitelik Katman Açıklaması,Öznitelik Sayısı,ROC-AUC,PR-AUC,F1-Skoru,Log-Loss,Brier Skoru,AIC (Normalize),Kurtarılan Performans - APGR (%)
+Aşama 1,Katman 1 - Yüzeysel Morfoloji (5 Öznitelik),5,0.6701,0.2259,0.2677,0.3752,0.1121,0.7515,28.09
+Aşama 2,Katman 1 + 2 - Sözdizimsel ve Kod Yoğunluğu (11 Öznitelik),11,0.7049,0.2753,0.3126,0.3646,0.1091,0.7313,32.29
+Aşama 3,Katman 1..3 - Bilgi Kuramı ve Sıkıştırma (16 Öznitelik),16,0.7033,0.2699,0.3054,0.365,0.1093,0.7332,31.97
+Aşama 4,Katman 1..4 - Okunabilirlik ve Sembol Yoğunluğu (19 Öznitelik),19,0.7041,0.2708,0.308,0.3649,0.1093,0.7337,32.17
+Tanı 1,"Salt Metin ve Bilgi Kuramı Mimarisi (Katman 1..4, Denetimli N-Gram Hariç)",24,0.7048,0.2675,0.304,0.3649,0.1094,0.7346,31.71
+Tanı 2,Salt Denetimli Sözcüksel N-Gram Mimarisi (2 Öznitelik),2,0.7617,0.3973,0.3913,0.3373,0.1003,0.675,39.4
+Aşama 5,"Katman 1..5 - Tam Birleşik Mimari (RouteCost-XAI, 26 Öznitelik)",26,0.7686,0.4018,0.4058,0.3348,0.0998,0.6747,41.08

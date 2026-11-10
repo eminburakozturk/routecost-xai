@@ -1,0 +1,7 @@
+﻿Görev Türü,Toplam İstem Sayısı,Düşük Risk (%),Orta Risk (%),Yüksek Risk (%),Ekonomik Rota Y=0 (%),Karmaşık Rota Y=1 (%),Ortalama Kalite Puanı,Ortalama Entropi H(X),İstatistiksel Test (Ki-Kare / ANOVA)
+Kodlama ve Algoritma,3446,12.45,38.28,49.27,78.93,21.07,4.15,4.462,p < 0.001
+Matematik ve Mantık,1284,16.51,53.19,30.3,76.56,23.44,4.1,4.428,p < 0.001
+Analitik Muhakeme,2879,79.85,19.17,0.97,91.18,8.82,4.56,4.079,p < 0.001
+Kısıtlı Format Üretimi,606,11.88,76.24,11.88,85.31,14.69,4.4,4.306,p < 0.001
+Genel Sohbet ve Özetleme,6785,88.58,11.35,0.07,90.3,9.7,4.54,4.068,p < 0.001
+Genel Geliştirme Kohortu (n=15.000: 12.000 Eğitim + 3.000 Doğrulama),15000,60.15,25.24,14.61,86.48,13.52,4.41,4.201,"Chi2=415.8 (p=1.05e-88), ANOVA F=114.8 (p=1.47e-96)"

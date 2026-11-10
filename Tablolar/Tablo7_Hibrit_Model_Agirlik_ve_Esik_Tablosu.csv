@@ -1,0 +1,5 @@
+﻿Alt Bileşen Modeli,Optimal Ağırlık Katsayısı (w),Ağırlık Oranı (%),Optimizasyon Kriteri,Youden J Eşiği,Maksimum F1 Eşiği,Varsayılan Eşik
+CatBoost,0.24,24,0.65*Brier + 0.35*LogLoss (Doğrulama Kümesi SLSQP),0.14,0.22,0.5
+XGBoost,0.18,18,0.65*Brier + 0.35*LogLoss (Doğrulama Kümesi SLSQP),0.14,0.22,0.5
+LightGBM,0.08,8,0.65*Brier + 0.35*LogLoss (Doğrulama Kümesi SLSQP),0.14,0.22,0.5
+Aşırı Rastgele Ağaçlar (Extra Trees),0.5,50,0.65*Brier + 0.35*LogLoss (Doğrulama Kümesi SLSQP),0.14,0.22,0.5

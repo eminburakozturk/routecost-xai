@@ -1,0 +1,14 @@
+﻿Analiz Kategorisi,Yöntem / Küme / Arama Stratejisi,Birincil Metrik (MSE / WCSS / Kombinasyon),İkincil Metrik (RMSE / Açıklanan Varyans / Süre),Üçüncül Metrik (MAE / Siluet Katsayısı / Doğrulama AUC),Dördüncül Metrik (RMSLE / Dunn İndeksi / Test AUC),Beşincil Metrik (R² ve Düzeltilmiş R² / Optimal Parametre)
+1. Regresyon Metrikleri (Kalite Puanı Tahmini),Doğrusal Regresyon (Linear Regression - OLS),MSE = 0.9847,RMSE = 0.9923,MAE = 0.7128,RMSLE = 0.2527,R² = 0.1644 (Adj. R² = 0.1622)
+1. Regresyon Metrikleri (Kalite Puanı Tahmini),Ridge Regresyon (L2 Cezalı Doğrusal Model),MSE = 0.9847,RMSE = 0.9923,MAE = 0.7130,RMSLE = 0.2527,R² = 0.1643 (Adj. R² = 0.1621)
+1. Regresyon Metrikleri (Kalite Puanı Tahmini),Lasso Regresyon (L1 Cezalı Seyrek Model),MSE = 0.9844,RMSE = 0.9922,MAE = 0.7166,RMSLE = 0.2531,R² = 0.1646 (Adj. R² = 0.1624)
+1. Regresyon Metrikleri (Kalite Puanı Tahmini),Gradyan Artırma Regresyonu (GBM Regressor),MSE = 0.9755,RMSE = 0.9877,MAE = 0.7105,RMSLE = 0.2508,R² = 0.1722 (Adj. R² = 0.1700)
+2. Denetimsiz Kümeleme Metrikleri (K-Means),"K-Means Kümeleme (k = 2 (Maksimum Siluet, Maksimum Dunn))",WCSS = 58312.6,Açıklanan Varyans = %27.97,Siluet = 0.3501,Tam Dunn İndeksi = 0.0468,2 Bilişsel Alt Küme Maksimum Siluet - Maksimum Dunn
+2. Denetimsiz Kümeleme Metrikleri (K-Means),K-Means Kümeleme (k = 3),WCSS = 50483.4,Açıklanan Varyans = %37.64,Siluet = 0.2328,Tam Dunn İndeksi = 0.0086,3 Alt Küme
+2. Denetimsiz Kümeleme Metrikleri (K-Means),K-Means Kümeleme (k = 4 (Dirsek Noktası)),WCSS = 46955.0,Açıklanan Varyans = %42.00,Siluet = 0.2199,Tam Dunn İndeksi = 0.0351,4 Bilişsel Alt Küme Dirsek Noktası
+2. Denetimsiz Kümeleme Metrikleri (K-Means),K-Means Kümeleme (k = 5),WCSS = 44435.8,Açıklanan Varyans = %45.11,Siluet = 0.1198,Tam Dunn İndeksi = 0.0252,5 Alt Küme
+2. Denetimsiz Kümeleme Metrikleri (K-Means),K-Means Kümeleme (k = 6),WCSS = 41775.2,Açıklanan Varyans = %48.40,Siluet = 0.1297,Tam Dunn İndeksi = 0.0212,6 Alt Küme
+3. Hiperparametre Optimizasyonu (Arama Stratejileri Kıyaslaması),Grid Arama (Grid Search - 3x3 Izgara),9 Deneme (Tam Kombinasyon),Süre = 3.06 sn,Doğrulama AUC = 0.7721,Test AUC = 0.7673,"n_estimators=180, max_depth=7"
+3. Hiperparametre Optimizasyonu (Arama Stratejileri Kıyaslaması),Rastgele Arama (Random Search),7 Rastgele Permütasyon,Süre = 2.64 sn,Doğrulama AUC = 0.7723,Test AUC = 0.7654,"n_estimators=207, max_depth=6, max_features=0.56"
+3. Hiperparametre Optimizasyonu (Arama Stratejileri Kıyaslaması),Kaba-İnce Arama (Coarse-to-Fine Search),4 Kaba + 3 İnce Daraltma (7 Deneme),Süre = 2.94 sn,Doğrulama AUC = 0.7718,Test AUC = 0.7674,"n_estimators=140, max_depth=7, max_features=0.55"
+3. Hiperparametre Optimizasyonu (Arama Stratejileri Kıyaslaması),Bayes Optimizasyonu (GP Vekil Model + EI),12 Ardışık Beklenen Kazanç (EI),Süre = 6.18 sn,Doğrulama AUC = 0.7719,Test AUC = 0.7679,"n_estimators=156, max_depth=9, max_features=0.75"

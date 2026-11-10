@@ -1,0 +1,12 @@
+﻿Yönlendirme Stratejisi,Büyük Model Çağrı Oranı (%),Ortalama Kalite Puanı,Kurtarılan Performans - APGR (%),Kümülatif Kazanç - Gain (%),Kaldırma Çarpanı (Lift),Karar Kanalı Hata Oranı,Net API Maliyet Tasarrufu (%),1 Milyon İstem Maliyeti (USD)
+Her Zaman Mixtral-8x7B (Alt Sınır),0.0,4.4162,0.0,0.0,1.0,0.1353,98.59,240.0
+Rastgele Yönlendirici (Eş-Bütçe),16.19,4.4951,16.05,16.11,1.0,0.2536,82.63,2953.4
+Sezgisel Uzunluk Modeli (Eş-Bütçe),16.73,4.5328,23.72,24.46,1.46,0.2364,82.09,3043.9
+Uyarlanmış RouteLLM - SW-Ranking Referansı (Eş-Bütçe),16.73,4.51,19.07,19.29,1.15,0.2504,82.09,3043.9
+Uyarlanmış RouteLLM - Matris Ayrıştırma MF (Eş-Bütçe),16.73,4.6103,39.47,43.53,2.6,0.1848,82.09,3043.9
+RouteCost-XAI (Optimal Eşik tau*=0.22),16.73,4.6169,40.82,45.08,2.69,0.1806,82.09,3043.9
+RouteCost-XAI (Youden J Eşiği tau_J=0.14),36.28,4.732,64.22,69.99,1.93,0.3087,62.82,6320.5
+RouteCost-XAI (Dengeli Eşik tau=0.25),12.42,4.5789,33.09,36.73,2.96,0.1601,86.34,2321.6
+RouteCost-XAI (Düşük Maliyet Eşiği tau=0.30),8.02,4.5397,25.12,27.35,3.41,0.1415,90.68,1584.2
+RouteCost-XAI (Ultra Güvenli Eşik tau=0.10),51.98,4.8007,78.19,83.74,1.61,0.4285,47.34,8951.8
+Her Zaman GPT-4 (Üst Sınır),100.0,4.9079,100.0,100.0,1.0,0.8647,0.0,17000.0

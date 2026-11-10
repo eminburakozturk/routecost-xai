@@ -1,0 +1,10 @@
+﻿Kalite Puanı / Grup,Yönlendirme Sınıfı,İstem Sayısı,Oran (%),DMS Öz-Bilgi I(s) (Bit),Kelime Sayısı (Ort±SS),Karakter Uzunluğu (Ort±SS),Shannon Entropisi (Ort±SS),Bilişsel Yük İndeksi (Ort±SS),Kod İçeren İstem Oranı (%),Matematik İçeren İstem Oranı (%)
+Puan 1 (En Düşük Kalite),Riskli / Karmaşık Rota (Y=1),718,4.79,4.3848,109.2 ± 99.3,643.3 ± 580.8,4.423 ± 0.292,6.34 ± 2.96,38.58,52.23
+Puan 2 (Düşük Kalite),Riskli / Karmaşık Rota (Y=1),684,4.56,4.4548,84.2 ± 94.7,503.0 ± 566.0,4.326 ± 0.307,5.55 ± 3.24,30.56,41.52
+Puan 3 (Orta/Eşik Altı),Riskli / Karmaşık Rota (Y=1),626,4.17,4.5827,76.7 ± 88.5,473.8 ± 542.1,4.277 ± 0.311,5.36 ± 3.29,24.44,41.37
+Puan 4 (İyi Kalite),Ekonomik Rota (Y=0),2668,17.79,2.4911,65.1 ± 88.5,403.0 ± 552.8,4.203 ± 0.286,4.66 ± 2.93,16.79,30.96
+Puan 5 (Mükemmel Kalite),Ekonomik Rota (Y=0),10304,68.69,0.5418,58.7 ± 85.6,354.1 ± 523.6,4.173 ± 0.299,4.32 ± 2.62,16.67,27.2
+"Eğitim Veri Kümesi (train.jsonl, N=109.101)",Genel Popülasyon (%13.52 Y=1),109101,100.0,1.4235,64.6 ± 88.5,390.6 ± 540.0,4.201 ± 0.303,4.58 ± 2.80,18.82,30.4
+"Resmi Test Veri Kümesi (valid.jsonl, N=10.000)",Genel Popülasyon (%13.53 Y=1),10000,100.0,1.4074,64.7 ± 89.4,391.9 ± 544.3,4.202 ± 0.303,4.57 ± 2.72,18.51,30.29
+Birleşik Veri Seti Toplamı (N=119.101),Genel Popülasyon (%13.52 Y=1),119101,100.0,1.4222,64.6 ± 88.5,390.7 ± 540.4,4.201 ± 0.303,4.57 ± 2.77,18.8,30.4
+Geliştirme Kohortu (n=15.000: 12.000 Eğitim + 3.000 Doğrulama),Genel Popülasyon (%13.52 Y=1),15000,100.0,1.4195,64.2 ± 88.2,388.4 ± 539.0,4.201 ± 0.303,4.58 ± 2.80,18.7,30.31
