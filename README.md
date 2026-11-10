@@ -6,6 +6,8 @@
 📓 **Kod:** [RouteCost_XAI_Proje_Kodu.ipynb](RouteCost_XAI_Proje_Kodu.ipynb)  
 📊 **Grafikler:** [Grafikler/](Grafikler) · **Tablolar:** [Tablolar/](Tablolar)
 
+<p align="center"><img src="Grafikler/Sekil10_APGR_Pareto_Maliyet_Optimizasyonu.png" width="900" alt="Maliyet-performans Pareto eğrisi ve API maliyeti"></p>
+
 ## Problem
 
 GPT-4 gibi modeller her istem için kullanılırsa maliyet çok yükselir. Ucuz modeller ise rutin istemlerde yeterlidir ama karmaşık istemlerde kalitesi düşer. RouteCost-XAI, ucuz modelin **kalite çöküşü yaşama riskini** (Mixtral puanı ≤ 3) tahmin eder ve sadece gerektiğinde pahalı modeli çağırır.
@@ -23,6 +25,10 @@ GPT-4 gibi modeller her istem için kullanılırsa maliyet çok yükselir. Ucuz 
 \* Her istemin GPT-4'e gönderilmesine göre API maliyetindeki düşüş.
 
 Hibrit model: **ROC-AUC 0,769 · doğruluk %81,9 · beklenen kalibrasyon hatası (ECE) 0,007.** Aynı bütçede RouteLLM'in matris ayrıştırma yönlendiricisinden daha fazla performans kurtarıyor.
+
+<p align="center"><img src="Grafikler/Sekil6_SHAP_Kuresel_Etki_Analizi.png" width="620" alt="Hibrit modelin SHAP özet grafiği"></p>
+
+En etkili öznitelikler denetimli sözcüksel n-gram skoru, semantik kalite açığı skoru ve Shannon entropisi.
 
 ## Yöntem
 
@@ -43,7 +49,7 @@ Kullanılan tüm yöntemlerin listesi: [docs/Kullanilan_Yontemler.txt](docs/Kull
 ## Çalıştırma
 
 ```bash
-pip install pandas numpy scipy scikit-learn xgboost lightgbm catboost shap matplotlib seaborn joblib
+pip install -r requirements.txt
 ```
 
 1. Hugging Face'teki `train.jsonl` ve `valid.jsonl` dosyalarını birleştirip `routellm_berkeley_dataset.csv` olarak notebook ile aynı klasöre koyun. Dosya 49 MB olduğu için repoya eklenmedi.
