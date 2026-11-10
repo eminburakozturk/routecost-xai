@@ -1,0 +1,130 @@
+ROUTECOST-XAI PROJESİNDE KULLANILAN YÖNTEMLER, MODELLER VE TEKNİKLER
+
+1. VERİ SETİ, BÖLÜMLEME VE ÖN İŞLEME YÖNTEMLERİ
+- LMSYS / UC Berkeley RouteLLM Kıyaslama Veri Seti (https://huggingface.co/datasets/routellm/gpt4_dataset/tree/main)
+- Birleştirilmiş Eğitim ve Resmi Test Veri Seti Mimarisi (train.jsonl + valid.jsonl)
+- Holdout Üçlü Bölümleme Yöntemi
+- 5-Katlı Tabakalı Çapraz Doğrulama (5-Fold Stratified Cross-Validation)
+- Değiştirmeli Önyükleme (Bootstrap Resampling)
+- Torba Dışı Doğrulama (Out-of-Bag / OOB Validation)
+- Sızıntısız Persentil Kırpma (Winsorization)
+- Z-Skoru Standartlaştırma (StandardScaler)
+- Rank-Gauss Normal Kantil Dönüşümü (QuantileTransformer)
+- Katman Dışı Tahmin Üretimi (Out-of-Fold / OOF Prediction)
+
+2. BİLGİ KURAMI (INFORMATION THEORY) VE KAYNAK/KANAL ANALİZ TEKNİKLERİ
+- Ayrık Belleksiz Kaynak (DMS) Modellemesi
+- Hartley / Shannon Öz-Bilgi Ölçüsü (Self-Information)
+- Shannon Karakter ve Sembol Entropisi
+- Normalize Entropi
+- Koşullu Entropi (Conditional Entropy)
+- Ortak Entropi (Joint Entropy)
+- Karşılıklı Bilgi (Mutual Information)
+- Bilgi Kazancı (Information Gain) ve F-Katsayılı Düzeltilmiş Bilgi Kazancı
+- Kullback-Leibler Diverjansı (Göreceli Entropi) ve Yönlü Asimetri Analizi
+- Lempel-Ziv (LZ77 / DEFLATE / Gzip) Kaynak Kodlama Sıkıştırma Oranı
+- Sinyal-Gürültü Oranı (SNR - dB)
+- Shannon Gürültülü Kanal Kapasitesi
+- Bilgi Hızı (Information Rate / Baud Hızı)
+- Bit Hata Oranı (Bit Error Rate - BER)
+
+3. DİLBİLİMSEL, SÖZDİZİMSEL VE BİLİŞSEL ÖZNİTELİK MÜHENDİSLİĞİ (5 KATMAN, 26 ÖZNİTELİK)
+- Yüzeysel Morfolojik Öznitelikler (Karakter Sayısı, Kelime Sayısı, Satır Sayısı, Ortalama Kelime Uzunluğu, Büyük Harf Oranı)
+- Sözdizimsel ve Kod/Sembol Yoğunluğu Öznitelikleri (Kod Parantez Sayısı, Matematiksel Operatör Sayısı, Kod Bloğu İşaretçisi, Rakam Oranı, Yan Cümle Noktalama Sayısı, Soru ve Ünlem Sayısı)
+- Kelime Çeşitliliği İndeksleri (Guiraud Kelime Zenginliği İndeksi, Herdan Logaritmik Çeşitlilik İndeksi)
+- Okunabilirlik İndeksleri (Coleman-Liau Okunabilirlik İndeksi, Otomatik Okunabilirlik İndeksi - ARI)
+- Yapısal Sembol Yoğunluğu
+- Görev Semantiği Anahtar Kelime Sayaçları (Muhakeme, Kodlama, Kısıt, Matematik)
+- Çok Granüllü Kelime ve Karakter N-Gram (char_wb) Alt-Doğrusal TF-IDF Vektörleştirme
+- NBSVM Bayesyen Dirichlet Log-Olasılık Oranı ve Complement Naive Bayes
+- Ortogonal Sözcüksel N-Gram Log-Olasılık Oranı
+- Ortogonal Semantik Kalite Açığı Skoru (Sürekli Ridge Projeksiyonu)
+- Bilişsel Yük İndeksi
+
+4. NORMALLİK TESTLERİ, AYKIRI DEĞER ANALİZİ VE İSTATİSTİKSEL HİPOTEZ TESTLERİ
+- Shapiro-Wilk Normallik Testi
+- Anderson-Darling Normallik Testi
+- Martinez-Iglewicz Ortanca Normallik Testi
+- Kolmogorov-Smirnov (K-S) İki Örneklem Dağılım Ayrım Testi
+- D'Agostino Çarpıklık (Skewness) Testi
+- Z-Skoru Aykırı Değer Tespiti
+- Kutu Grafiği (Box-Plot / IQR) ve Keman Grafiği (Violin Plot) Analizi
+- Kovaryans Analizi
+- Pearson Doğrusal Korelasyon Katsayısı
+- Spearman Sıra Korelasyonu Katsayısı
+- Ardışık Varyans Şişme Faktörü (Iterative VIF) Çoklu Doğrusal Bağlantı Elemesi
+- Mann-Whitney U Parametrik Olmayan İki Örneklem Testi
+- Tek Yönlü Varyans Analizi (One-Way ANOVA F-Testi)
+- Pearson Ki-Kare Bağımsızlık Testi
+- Wilcoxon İşaretli Sıra Testi (Wilcoxon Signed-Rank Test)
+- McNemar Eşleştirilmiş Ki-Kare Testi
+
+5. DENETİMLİ SINIFLANDIRMA VE YÖNLENDİRME MODELLERİ (20 MODEL)
+- Ağırlıklı Hibrit Model (RouteCost-XAI)
+- CatBoost Sınıflandırıcısı
+- XGBoost Sınıflandırıcısı
+- LightGBM Sınıflandırıcısı
+- Gradyan Artırma Sınıflandırıcısı (Gradient Boosting - GBM)
+- AdaBoost Sınıflandırıcısı
+- Yığınlama Topluluk Modeli (Stacking Classifier)
+- Rastgele Orman Sınıflandırıcısı (Random Forest)
+- Aşırı Rastgele Ağaçlar Sınıflandırıcısı (Extra Trees)
+- Torbalama Sınıflandırıcısı (Bagging Classifier - OOB)
+- Çok Katmanlı Algılayıcı (MLP Yapay Sinir Ağı)
+- Karar Ağacı Sınıflandırıcısı (CART - Gini Kriteri)
+- Karar Ağacı Sınıflandırıcısı (ID3 / C4.5 - Entropi ve Bilgi Kazancı Kriteri)
+- k-En Yakın Komşular Sınıflandırıcısı (k-NN)
+- Destek Vektör Makineleri (SVM - RBF Çekirdek)
+- Doğrusal SVM (Hinge Loss Sınıflandırıcısı)
+- Lojistik Regresyon (L2 Cezalı)
+- Lineer Diskriminant Analizi (LDA)
+- Gaussian Naive Bayes
+- Sezgisel Uzunluk Baz Modeli
+
+6. SÜREKLİ KALİTE PUANI REGRESYON MODELLERİ (4 MODEL)
+- En Küçük Kareler Doğrusal Regresyonu (OLS)
+- Ridge Regresyonu (L2 Düzenlileştirmeli)
+- Lasso Regresyonu (L1 Düzenlileştirmeli)
+- Gradyan Artırma Regresyonu (Gradient Boosting Regressor)
+
+7. DENETİMSİZ ÖĞRENME, KÜMELEME VE BOYUT İNDİRGEME TEKNİKLERİ
+- Temel Bileşen Analizi (PCA)
+- t-Dağılımlı Stokastik Komşu Gömme (t-SNE)
+- K-Ortalamalar Kümeleme (K-Means Clustering)
+- Dirsek Yöntemi (Elbow Method / WCSS ve Açıklanan Varyans)
+- Siluet Katsayısı (Silhouette Coefficient)
+- Dunn İndeksi (Tam Noktadan Noktaya Çap Oranı)
+
+8. HİPERPARAMETRE OPTİMİZASYONU, OLASILIK KALİBRASYONU VE KARAR OPTİMİZASYONU
+- Grid Arama (Grid Search)
+- Rastgele Arama (Random Search)
+- Kaba-İnce Arama (Coarse-to-Fine Search)
+- Gauss Süreci Vekil Modelli ve Beklenen Kazançlı Bayes Optimizasyonu (GP-EI Bayesian Optimization)
+- Platt Sigmoid Olasılık Kalibrasyonu
+- İzotonik Regresyon Kalibrasyonu
+- Sıralı En Küçük Kareler Programlaması (SLSQP) Ağırlık Optimizasyonu
+- Supra-Bayesyen Log-Odds (Logit) ve Doğrusal Olasılık Hibrit Harmanlaması
+- Eğitim Kümesi Üst-Kuyruk Kaynak Alanı Hizalaması
+- Youden J İstatistiği ve Maksimum F1 Karar Eşiği Optimizasyonu
+
+9. MODEL DEĞERLENDİRME, SEÇİM VE EKONOMİ METRİKLERİ
+- Önyargı-Varyans Değiş Tokuşu, Öğrenme Eğrileri (Learning Curves) ve Doğrulama Eğrileri (Validation Curves)
+- Karışıklık Matrisi (TP, TN, FP, FN)
+- Doğruluk (Accuracy), Kesinlik (Precision), Duyarlılık (Sensitivity / Recall), Özgüllük (Specificity)
+- F1-Skoru, Matthews Korelasyon Katsayısı (MCC), Cohen Kappa
+- Alıcı İşlem Karakteristiği Eğrisi ve Altındaki Alan (ROC-AUC)
+- Kesinlik-Duyarlılık Eğrisi ve Altındaki Alan (PR-AUC)
+- Logaritmik Kayıp (Log-Loss), Menteşe Kaybı (Hinge Loss), Brier Skoru, Beklenen Kalibrasyon Hatası (ECE)
+- Akaike Bilgi Kriteri (AIC), Bayes Bilgi Kriteri (BIC), Minimum Açıklama Uzunluğu (MDL), Yapısal Risk Minimizasyonu (SRM)
+- Kümülatif Kazanç Grafiği (Cumulative Gain), Kaldırma Çizelgesi (Lift Chart), Kolmogorov-Smirnov (K-S) Ayrım Şeması
+- Ortalama Kare Hata (MSE), Kök Ortalama Kare Hatası (RMSE), Ortalama Mutlak Hata (MAE), Kök Ortalama Kare Logaritmik Hata (RMSLE)
+- Belirlilik Katsayısı (R^2) ve Düzeltilmiş R-Kare (Adjusted R^2)
+- Katman Bazlı Ablasyon Analizi (Layer-wise Ablation Study)
+- Karar Eğrisi Analizi (Decision Curve Analysis - DCA)
+- ICLR RouteLLM Ortalama Performans Boşluğu Kurtarma Oranı (APGR) ve Pareto Maliyet Ekonomisi
+
+10. AÇIKLANABİLİR YAPAY ZEKA (XAI) TEKNİKLERİ
+- TreeSHAP Küresel Öznitelik Önem Sıralaması
+- SHAP Arı Kovanı (Beeswarm) Özet Grafiği
+- SHAP İki Değişkenli Bağımlılık ve Etkileşim Analizi
+- SHAP Yerel Örnek Düzeyinde Şelale (Waterfall) Karar Açıklaması
